@@ -1,0 +1,256 @@
+.alerts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.alerts-header {
+  margin-bottom: 2rem;
+}
+
+.alerts-header h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.alerts-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.create-alert-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.create-alert-form h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.alert-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.create-alert-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.create-alert-button:hover {
+  transform: translateY(-2px);
+}
+
+.alerts-list {
+  margin-bottom: 2rem;
+}
+
+.alerts-list h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.no-alerts {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.no-alerts p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.alerts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.alert-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.alert-card:hover {
+  transform: translateY(-5px);
+}
+
+.alert-card.inactive {
+  opacity: 0.7;
+}
+
+.alert-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.alert-title h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.alert-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.alert-status.active {
+  background: rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+}
+
+.alert-status.inactive {
+  background: rgba(244, 67, 54, 0.3);
+  color: #f44336;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toggle-button, .delete-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.toggle-button:hover, .delete-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.alert-condition {
+  padding: 1.5rem;
+  background: #f8f9fa;
+}
+
+.alert-condition p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.alert-condition strong {
+  color: #667eea;
+}
+
+.alert-meta {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.alert-type {
+  color: #666;
+}
+
+.alert-date {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .alerts-container {
+    padding: 1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .alerts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .alert-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .alert-title {
+    flex-direction: column;
+  }
+  
+  .alert-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
